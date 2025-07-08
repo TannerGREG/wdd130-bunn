@@ -1,36 +1,138 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <title>Ideas</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Summer Ideas Page</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #FCF6BD;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem;
+      border-bottom: 2px solid #ccc;
+      background-color: #D0F4DE;
+    }
+
+    .logo {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: #fff;
+      border: 2px solid #999;
+    }
+
+    nav {
+      display: flex;
+      gap: 1rem;
+    }
+
+    nav button {
+      padding: 0.5rem 1rem;
+      border: none;
+      background-color: #fff;
+      border: 2px solid #333;
+      cursor: pointer;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+
+    .main-title {
+      text-align: center;
+      padding: 1rem;
+      background-color: #fff;
+      border: 2px solid #999;
+      margin: 1rem auto;
+      width: fit-content;
+      border-radius: 6px;
+    }
+
+    .ideas {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .idea-box {
+      background-color: #fff;
+      border: 2px solid #999;
+      padding: 1rem;
+      width: 200px;
+      border-radius: 6px;
+    }
+
+    .lower-section {
+      display: flex;
+      border-top: 2px solid #ccc;
+      padding: 2rem;
+    }
+
+    .lower-left {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .lower-left-box {
+      background-color: #fff;
+      border: 2px solid #999;
+      padding: 1rem;
+      border-radius: 6px;
+      width: 200px;
+    }
+
+    .lower-right {
+      flex: 1;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #D0F4DE;
+      border-top: 2px solid #ccc;
+    }
+  </style>
 </head>
 <body>
-<h1>Below you’ll find our recommendations for things to do during the summer months. You’ll also find extra ideas and suggestions to help spark inspiration on those boring weekends</h1>
-    <ul>
-        <li>ave a water balloon fight</li>
-        <li>Visit Porter Park</li>
-        <li>Attend a BYUI event</li>
-        <li>Hold a picnic</li>
-        <li>Go cloud-watching</li>
-        <li>Go camping</li>
-        <li>Read a book</li>
-        <li>Visit a farmers’ market</li>
-        <li>Go stargazing</li>
-        <li>Try the ropes course</li>
-        <li>Attend a play or production</li>
-        <li>Make s’mores</li>
-        <li>Have a cookout</li>
-        <li>Walk around town</li>
-        <li>Run through the sprinklers</li>
-        <li>Have a photoshoot</li>
-        <li>Go to an outdoor concert</li>
-        <li>Visit Craters of the Moon</li>
-        <li>Volunteer somewhere local</li>
-        <li>Eat ice cream with friends</li>
-        <li>Go swimming, inner tubing, kayaking, etc</li>
-        <li>Go hiking at Cress Creek</li>
-        <li>Try a new hobby</li>
-    </ul>
-    
+
+  <header>
+    <div class="logo"></div>
+    <nav>
+      <button>Home</button>
+      <button>Ideas</button>
+      <button>Events</button>
+    </nav>
+  </header>
+
+  <h1 class="main-title">Idea List</h1>
+
+  <section class="ideas">
+    <div class="idea-box">Lorem ipsum lorem ipsum lorem ipsum</div>
+    <div class="idea-box">Lorem ipsum lorem ipsum lorem ipsum</div>
+  </section>
+
+  <section class="lower-section">
+    <div class="lower-left">
+      <div class="lower-left-box">Lorem ipsum lorem ipsum</div>
+    </div>
+    <div class="lower-right">
+      <!-- You can add content here later -->
+    </div>
+  </section>
+
+  <footer>
+    Copyright and Footer
+  </footer>
+
 </body>
 </html>

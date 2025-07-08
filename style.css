@@ -1,0 +1,111 @@
+/*primary( #FCF6BD ) Secondary(	#D0F4DE), Accent1(	#A9DEF9 ) Accent2(	#E4C1F9 ) */
+:root {
+    --primary: #FCF6BD;
+    --Secondary: #D0F4DE;
+    --accent_1: #A9DEF9;
+    --accent_2: #E4C1F9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: var(--Secondary);
+    color: var(--primary);
+    background-image: url('../images/green_space.jpeg');
+    background-repeat: repeat;
+    background-size: 250px 250px; 
+    background-position: top left;
+    background-attachment: fixed;
+}
+
+#wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: var(--accent_1);
+    padding: 20px;
+}
+
+header {
+    position: relative;
+    text-align: center;
+    padding: 20px 0;
+    background-color: var(--accent_2);
+    color: var(--Secondary);
+}
+
+.header-img {
+    width: 80px;
+    border-radius: 10px;
+    position: absolute;
+    left: 30px;
+    bottom: 15px;
+    z-index: 2;
+}
+
+nav {
+
+    text-align: center;
+    padding: 10px 0;
+    margin-bottom: 15px;
+}
+
+nav a {
+    color: var(--accent_1);
+    background-color:var(--primary) ;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    padding: 6px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--primary);
+    background-color: var(--accent_1);
+    text-decoration: none;
+    outline: none;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 1fr, 1fr;
+    grid-template-columns: 1fr 1fr;
+}
+
+#backgroundphoto{
+grid-template-rows: 1/3fr;
+grid-column: 1/2fr;
+
+}
+
+footer {
+    position: relative;
+    text-align: center;
+    padding: 20px 0;
+    background-color: var(--accent_2);
+    color: var(--accent_1);
+}
+footer a {
+    color: var(--accent_1);
+    background-color:var(--primary) ;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    padding: 6px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--primary);
+    background-color: var(--accent_1);
+    text-decoration: none;
+    outline: none;
+}

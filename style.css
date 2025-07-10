@@ -75,14 +75,45 @@ nav a:hover {
 
 main{
     display: grid;
-    grid-template-columns: 1fr, 1fr;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
 }
 
-#backgroundphoto{
-grid-template-rows: 1/3fr;
-grid-column: 1/2fr;
+#backgroundphoto {
+    
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+}
 
+#backgorundphoto img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+.text_overlay {
+    color: var(--primary);
+    padding: 20px;
+    border-radius: 8px;
+}
+.button-box {
+justify-self: center;
+}
+#backgroundphoto a {
+    color: var(--accent_1);
+    background-color:var(--primary) ;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.box_two {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+.box_three {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
 }
 
 footer {

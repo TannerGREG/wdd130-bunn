@@ -37,6 +37,7 @@ header {
     padding: 20px 0;
     background-color: var(--accent_2);
     color: var(--Secondary);
+
 }
 
 .header-img {
@@ -141,11 +142,12 @@ h2{
 .box_two {
     grid-column: 1 /2 ;
     grid-row: 2/3;
-
+    border: #E4C1F9 solid 5px;
 }
 .box_three {
 grid-column: 2 / 3;
 grid-row: 2 / 3;
+border: #E4C1F9 solid 5px;
 }
 
 footer {

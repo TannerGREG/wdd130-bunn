@@ -2,103 +2,133 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Summer Ideas Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Summer Ideas</title>
+
+
   <style>
+    /* ---- Base ---- */
+    :root {
+      --bg:      #FCF6BD;
+      --accent:  #D0F4DE;
+      --border:  #999;
+      --text:    #333;
+      --radius:  8px;
+    }
+    * { box-sizing: border-box; }
+
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
-      padding: 0;
-      background-color: #FCF6BD;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: var(--bg);
+      color: var(--text);
     }
 
+    /* ---- Header ---- */
     header {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 1rem;
+      padding: 1rem 1.25rem;
+      background: var(--accent);
       border-bottom: 2px solid #ccc;
-      background-color: #D0F4DE;
     }
-
     .logo {
-      width: 40px;
-      height: 40px;
+      width: 44px;
+      aspect-ratio: 1;
       border-radius: 50%;
-      background-color: #fff;
-      border: 2px solid #999;
+      background: #fff;
+      border: 2px solid var(--border);
     }
-
-    nav {
+    nav ul {
+      list-style: none;
       display: flex;
       gap: 1rem;
+      margin: 0;
+      padding: 0;
     }
-
-    nav button {
-      padding: 0.5rem 1rem;
-      border: none;
-      background-color: #fff;
+    nav a {
+      display: inline-block;
+      padding: .5rem 1.1rem;
+      font-weight: 600;
+      text-decoration: none;
+      color: var(--text);
+      background: #fff;
       border: 2px solid #333;
-      cursor: pointer;
-      border-radius: 6px;
-      font-weight: bold;
+      border-radius: var(--radius);
+      transition: background .25s;
     }
+    nav a:hover { background: #ececec; }
 
+    /* ---- Titles ---- */
     .main-title {
+      margin: 1.5rem auto;
+      width: max-content;
+      padding: .75rem 1.5rem;
+      font-size: 2.25rem;
       text-align: center;
-      padding: 1rem;
-      background-color: #fff;
-      border: 2px solid #999;
-      margin: 1rem auto;
-      width: fit-content;
-      border-radius: 6px;
+      background: #fff;
+      border: 2px solid var(--border);
+      border-radius: var(--radius);
     }
 
+    /* ---- Idea Cards ---- */
     .ideas {
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
       gap: 2rem;
-      padding: 1rem;
-      flex-wrap: wrap;
+      padding: 0 1rem 2rem;
     }
-
     .idea-box {
-      background-color: #fff;
-      border: 2px solid #999;
-      padding: 1rem;
-      width: 200px;
-      border-radius: 6px;
+      width: 260px;
+      background: #fff;
+      border: 2px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem 1.25rem 1rem;
+      transition: transform .25s;
     }
+    .idea-box:hover { transform: translateY(-6px); }
 
+    .idea-title {
+      text-align: center;
+      margin: 0 0 .75rem;
+      font-size: 1.35rem;
+      color: #2d5a58;
+    }
+    .idea-box ul {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+    .idea-box li { margin-bottom: .65rem; }
+
+    /* ---- Lower Section ---- */
     .lower-section {
       display: flex;
+      flex-wrap: wrap;
       border-top: 2px solid #ccc;
-      padding: 2rem;
+      padding: 2rem 1rem;
+      gap: 1.5rem;
     }
-
-    .lower-left {
-      flex: 1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+    .lower-left,
+    .lower-right { flex: 1 1 300px; }
 
     .lower-left-box {
-      background-color: #fff;
-      border: 2px solid #999;
+      margin: auto;
+      max-width: 260px;
+      background: #fff;
+      border: 2px solid var(--border);
+      border-radius: var(--radius);
       padding: 1rem;
-      border-radius: 6px;
-      width: 200px;
+      text-align: center;
     }
 
-    .lower-right {
-      flex: 1;
-    }
-
+    /* ---- Footer ---- */
     footer {
       text-align: center;
       padding: 1rem;
-      background-color: #D0F4DE;
+      background: var(--accent);
       border-top: 2px solid #ccc;
     }
   </style>
@@ -107,65 +137,69 @@
 
   <header>
     <div class="logo"></div>
+
     <nav>
-      <button>Home</button>
-      <button>Ideas</button>
-      <button>Events</button>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Ideas</a></li>
+        <li><a href="#">Events</a></li>
+      </ul>
     </nav>
   </header>
 
-  <h1 class="main-title">Idea List</h1>
+  <h1 class="main-title">🎉 Summer Idea List</h1>
 
-<h1 class="main-title">🎉 Summer Idea List</h1>
+  <section class="ideas">
+    <div class="idea-box">
+      <h2 class="idea-title">Outdoor Fun</h2>
+      <ul>
+        <li>💦 Have a water balloon fight</li>
+        <li>🌳 Visit Porter Park</li>
+        <li>🎭 Attend a BYU‑Idaho event</li>
+        <li>🧺 Hold a picnic</li>
+        <li>☁️ Go cloud‑watching</li>
+        <li>🏕️ Go camping</li>
+        <li>📖 Read a book</li>
+        <li>🌽 Visit a farmers’ market</li>
+        <li>✨ Go stargazing</li>
+        <li>🧗 Try the ropes course</li>
+        <li>🎟️ Attend a play or production</li>
+      </ul>
+    </div>
 
-<section class="ideas">
-  <div class="idea-box">
-    <h2 class="idea-title">Outdoor Fun</h2>
-    <ul>
-      <li>💦 Have a water balloon fight</li>
-      <li>🌳 Visit Porter Park</li>
-      <li>🎭 Attend a BYUI event</li>
-      <li>🧺 Hold a picnic</li>
-      <li>☁️ Go cloud-watching</li>
-      <li>🏕️ Go camping</li>
-      <li>📖 Read a book</li>
-      <li>🌽 Visit a farmers’ market</li>
-      <li>✨ Go stargazing</li>
-      <li>🧗 Try the ropes course</li>
-      <li>🎟️ Attend a play or production</li>
-    </ul>
-  </div>
-
-  <div class="idea-box">
-    <h2 class="idea-title">Creative & Social</h2>
-    <ul>
-      <li>🔥 Make s’mores</li>
-      <li>🍔 Have a cookout</li>
-      <li>🚶 Walk around town</li>
-      <li>💧 Run through the sprinklers</li>
-      <li>📸 Have a photoshoot</li>
-      <li>🎶 Go to an outdoor concert</li>
-      <li>🌋 Visit Craters of the Moon</li>
-      <li>🤝 Volunteer somewhere local</li>
-      <li>🍦 Eat ice cream with friends</li>
-      <li>🏊 Go swimming, tubing, or kayaking</li>
-      <li>🥾 Hike Cress Creek</li>
-      <li>🧶 Try a new hobby</li>
-    </ul>
-  </div>
-</section>
+    <div class="idea-box">
+      <h2 class="idea-title">Creative & Social</h2>
+      <ul>
+        <li>🔥 Make s’mores</li>
+        <li>🍔 Have a cookout</li>
+        <li>🚶 Walk around town</li>
+        <li>💧 Run through the sprinklers</li>
+        <li>📸 Have a photoshoot</li>
+        <li>🎶 Go to an outdoor concert</li>
+        <li>🌋 Visit Craters of the Moon</li>
+        <li>🤝 Volunteer locally</li>
+        <li>🍦 Eat ice cream with friends</li>
+        <li>🏊 Swim, tube, or kayak</li>
+        <li>🥾 Hike Cress Creek</li>
+        <li>🧶 Try a new hobby</li>
+      </ul>
+    </div>
+  </section>
 
   <section class="lower-section">
     <div class="lower-left">
-      <div class="lower-left-box">Lorem ipsum lorem ipsum</div>
+      <div class="lower-left-box">
+        <!-- Placeholder content -->
+        <strong>Tip:</strong> Add upcoming event details here!
+      </div>
     </div>
     <div class="lower-right">
-      <!-- You can add content here later -->
+      <!-- Future content goes here -->
     </div>
   </section>
 
   <footer>
-    copyright &copy; 2025 Summer Ideas Page
+    &copy; 2025 Summer Ideas Page
   </footer>
 
 </body>

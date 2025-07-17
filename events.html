@@ -1,10 +1,236 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <title>Events</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Events in the Area</title>
+
+  <style>
+    :root {
+      --bg:      #FCF6BD;
+      --accent:  #D0F4DE;
+      --border:  #999;
+      --text:    #333;
+      --radius:  8px;
+    }
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 1.25rem;
+      background: var(--accent);
+      border-bottom: 2px solid #ccc;
+    }
+    .logo {
+      width: 44px;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background: #fff;
+      border: 2px solid var(--border);
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+      margin: 0;
+      padding: 0;
+    }
+    nav a {
+      display: inline-block;
+      padding: .5rem 1.1rem;
+      font-weight: 600;
+      text-decoration: none;
+      color: var(--text);
+      background: #fff;
+      border: 2px solid #333;
+      border-radius: var(--radius);
+      transition: background .25s;
+    }
+    nav a:hover { background: #ececec; }
+
+    .main-title {
+      margin: 1.5rem auto;
+      width: max-content;
+      padding: .75rem 1.5rem;
+      font-size: 2.25rem;
+      text-align: center;
+      background: #fff;
+      border: 2px solid var(--border);
+      border-radius: var(--radius);
+    }
+
+    .events {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      padding: 0 1rem 2rem;
+    }
+    .event-box {
+      width: 300px;
+      background: #fff;
+      border: 2px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      transition: transform .25s, box-shadow .25s;
+    }
+    .event-box:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    .event-title {
+      margin: 0 0 .5rem;
+      font-size: 1.4rem;
+      color: #2d5a58;
+    }
+    .event-date {
+      font-weight: bold;
+      color: #aa3b00;
+      margin-bottom: .5rem;
+    }
+    .event-location {
+      font-style: italic;
+      margin-bottom: .75rem;
+    }
+
+    .lower-section {
+      display: flex;
+      flex-wrap: wrap;
+      border-top: 2px solid #ccc;
+      padding: 2rem 1rem;
+      gap: 1.5rem;
+    }
+    .lower-left,
+    .lower-right { flex: 1 1 300px; }
+
+    .lower-left-box {
+      margin: auto;
+      max-width: 260px;
+      background: #fff;
+      border: 2px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1rem;
+      text-align: center;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: var(--accent);
+      border-top: 2px solid #ccc;
+    }
+  </style>
 </head>
 <body>
-    
+
+  <header>
+    <div class="logo"></div>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Events</a></li>
+        <li><a href="#">Map</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <h1 class="main-title">📅 Events in the Area</h1>
+
+  <section class="events">
+    <div class="event-box">
+      <h2 class="event-title">🎆 4th of July Fireworks</h2>
+      <div class="event-date">July 4, 2025</div>
+      <div class="event-location">3914 Teton Rd, Island Park</div>
+      <p>Join a late-night fireworks celebration — perfect for friends and families!</p>
+    </div>
+
+    <div class="event-box">
+      <h2 class="event-title">🎻 BYUI University Orchestra</h2>
+      <div class="event-date">July 8, 2025</div>
+      <div class="event-location">Barrus Concert Hall</div>
+      <p>Enjoy a stunning orchestral performance at a discounted student rate.</p>
+    </div>
+
+    <div class="event-box">
+      <h2 class="event-title">🕳️ BYUI Caving</h2>
+      <div class="event-date">July 9, 2025</div>
+      <div class="event-location">Civil Defense Caves</div>
+      <p>Explore local caves with gear provided — only $5!</p>
+    </div>
+
+    <div class="event-box">
+      <h2 class="event-title">🎶 Orchestra Encore</h2>
+      <div class="event-date">July 15, 2025</div>
+      <div class="event-location">Barrus Concert Hall</div>
+      <p>Another amazing concert — hear music refined to perfection.</p>
+    </div>
+
+    <div class="event-box">
+      <h2 class="event-title">🏮 Water Lantern Festival</h2>
+      <div class="event-date">July 12, 2025</div>
+      <div class="event-location">Waterfront, Idaho Falls</div>
+      <p>Light a lantern and watch it float across the Snake River at sunset.</p>
+    </div>
+
+    <div class="event-box">
+      <h2 class="event-title">🎤 I-Talent Show</h2>
+      <div class="event-date">July 18, 2025</div>
+      <div class="event-location">MC Center</div>
+      <p>Share your talents, meet others, and enjoy a night of student creativity!</p>
+    </div>
+
+    <div class="event-box">
+      <h2 class="event-title">🗻 Yellowstone Tour</h2>
+      <div class="event-date">July 19, 2025</div>
+      <div class="event-location">Yellowstone National Park</div>
+      <p>See Old Faithful, Grand Prismatic, and more for just $25!</p>
+    </div>
+
+    <div class="event-box">
+      <h2 class="event-title">🧺 Rexburg Farmer’s Market</h2>
+      <div class="event-date">Fridays, All Summer</div>
+      <div class="event-location">Downtown Rexburg</div>
+      <p>Support local vendors and enjoy fresh produce and crafts weekly.</p>
+    </div>
+
+    <div class="event-box">
+      <h2 class="event-title">🌽 Idaho Falls Farmer’s Market</h2>
+      <div class="event-date">Saturdays, All Summer</div>
+      <div class="event-location">Idaho Falls</div>
+      <p>A community favorite! Shop and connect every Saturday morning.</p>
+    </div>
+
+    <div class="event-box">
+      <h2 class="event-title">🎨 Riverwalk Art Festival</h2>
+      <div class="event-date">July 26, 2025</div>
+      <div class="event-location">Greenbelt, Idaho Falls</div>
+      <p>Walk by the river and explore artistic creations of all types.</p>
+    </div>
+  </section>
+
+  <section class="lower-section">
+    <div class="lower-left">
+      <div class="lower-left-box">
+        <strong>Tip:</strong> Check back weekly for more events and updates!
+      </div>
+    </div>
+    <div class="lower-right">
+      <!-- You can add interactive maps or contact forms here later -->
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Events Around Southeast Idaho
+  </footer>
+
 </body>
 </html>
